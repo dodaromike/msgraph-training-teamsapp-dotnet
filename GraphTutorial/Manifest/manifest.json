@@ -1,1 +1,32 @@
-{"$schema":"https://developer.microsoft.com/en-us/json-schemas/teams/v1.14/MicrosoftTeams.schema.json","version":"1.0.0","manifestVersion":"1.14","id":"09bf7eab-bbff-4998-bfe3-a06f0f13554c","packageName":"com.package.name","name":{"short":"Teams Graph App","full":""},"developer":{"name":"Mike Dodaro","mpnId":"","websiteUrl":"https://0b58-50-47-104-37.ngrok.io","privacyUrl":"https://mikedodaro.net","termsOfUseUrl":"https://mikedodaro.net"},"description":{"short":"Test app using MS Graph in Teams","full":"Test app using MS Graph in Teams.  Developer Portal instead of deprecated App Studio"},"icons":{"outline":"outline.png","color":"color.png"},"accentColor":"#FFFFFF","validDomains":["0b58-50-47-104-37.ngrok.io"],"webApplicationInfo":{"id":"edb0987e-fef7-40fd-9fde-4525275c8670","resource":""}}
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
+    "version": "1.0.0",
+    "manifestVersion": "1.14",
+    "id": "c4629713-a33b-421a-bfa6-7eb3b9274ee4",
+    "packageName": "com.package.name",
+    "name": {
+      "short": "Teams Graph Tutorial",
+      "full": "This sample demonstrates use of Graph .NET SDK to access data in Office 365 from Teams apps."
+    },
+    "developer": {
+      "name": "",
+      "mpnId": "",
+      "websiteUrl": "https://mikedodaro.net/",
+      "privacyUrl": "https://mikedodaro.net/",
+      "termsOfUseUrl": "https://mikedodaro.net/"
+    },
+    "description": {
+      "short": "Graph .NET SDK access data in Office 365 from Teams apps.",
+      "full": "This sample demonstrates how to use the Microsoft Graph .NET SDK to access data in Office 365 from Microsoft Teams apps."
+    },
+    "icons": {
+      "outline": "outline.png",
+      "color": "color.png"
+    },
+    "accentColor": "#FFFFFF",
+    "validDomains": [],
+    "webApplicationInfo": {
+      "id": "a44f1df0-283d-4a4c-b4df-8029d27bd804",
+      "resource": "api://272b-50-35-187-170.ngrok.io/a44f1df0-283d-4a4c-b4df-8029d27bd804"
+    }
+  }
