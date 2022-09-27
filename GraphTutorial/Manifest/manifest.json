@@ -1,6 +1,6 @@
 {
     "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "manifestVersion": "1.14",
     "id": "c4629713-a33b-421a-bfa6-7eb3b9274ee4",
     "packageName": "com.package.name",
@@ -9,7 +9,7 @@
       "full": "This sample demonstrates use of Graph .NET SDK to access data in Office 365 from Teams apps."
     },
     "developer": {
-      "name": "",
+      "name": "Mike Dodaro",
       "mpnId": "",
       "websiteUrl": "https://mikedodaro.net/",
       "privacyUrl": "https://mikedodaro.net/",
@@ -28,5 +28,11 @@
     "webApplicationInfo": {
       "id": "a44f1df0-283d-4a4c-b4df-8029d27bd804",
       "resource": "api://272b-50-35-187-170.ngrok.io/a44f1df0-283d-4a4c-b4df-8029d27bd804"
-    }
+    },
+    "defaultGroupCapability": {
+      "team": "tab",
+      "groupchat": "tab",
+      "meetings": "tab"
+    },
+    "defaultInstallScope": "personal"
   }
