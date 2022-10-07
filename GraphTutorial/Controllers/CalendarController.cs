@@ -98,6 +98,24 @@ namespace GraphTutorial.Controllers
         }
         // </GetSnippet>
 
+        // <GetStartOfWeekSnippet>
+        private DateTime GetUtcStartOfWeekInTimeZone(DateTime today, string timeZoneId)
+        {
+            // Time zone returned by Graph could be Windows or IANA style
+            // TimeZoneConverter can take either
+            TimeZoneInfo userTimeZone = TZConvert.GetTimeZoneInfo(timeZoneId);
+
+            // Assumes Sunday as first day of week
+            int diff = System.DayOfWeek.Sunday - today.DayOfWeek;
+
+            // create date as unspecified kind
+            var unspecifiedStart = DateTime.SpecifyKind(today.AddDays(diff), DateTimeKind.Unspecified);
+
+            // convert to UTC
+            return TimeZoneInfo.ConvertTimeToUtc(unspecifiedStart, userTimeZone);
+        }
+        // </GetStartOfWeekSnippet>
+
         // <PostSnippet>
         [HttpPost]
         public async Task<ActionResult<string>> Post(NewEvent newEvent)
@@ -175,24 +193,6 @@ namespace GraphTutorial.Controllers
         }
         // </PostSnippet>
 
-        // <GetStartOfWeekSnippet>
-        private DateTime GetUtcStartOfWeekInTimeZone(DateTime today, string timeZoneId)
-        {
-            // Time zone returned by Graph could be Windows or IANA style
-            // TimeZoneConverter can take either
-            TimeZoneInfo userTimeZone = TZConvert.GetTimeZoneInfo(timeZoneId);
-
-            // Assumes Sunday as first day of week
-            int diff = System.DayOfWeek.Sunday - today.DayOfWeek;
-
-            // create date as unspecified kind
-            var unspecifiedStart = DateTime.SpecifyKind(today.AddDays(diff), DateTimeKind.Unspecified);
-
-            // convert to UTC
-            return TimeZoneInfo.ConvertTimeToUtc(unspecifiedStart, userTimeZone);
-        }
-        // </GetStartOfWeekSnippet>
-
         // <HandleGraphExceptionSnippet>
         private ActionResult HandleGraphException(Exception exception)
         {
@@ -231,5 +231,4 @@ namespace GraphTutorial.Controllers
         }
         // </HandleGraphExceptionSnippet>
     }
-
 }

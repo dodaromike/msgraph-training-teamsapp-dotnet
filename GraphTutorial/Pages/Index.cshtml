@@ -16,12 +16,11 @@
     microsoftTeams.initialize();
 
     microsoftTeams.authentication.getAuthToken({
-      successCallback: (token) => {
-  loadUserCalendar(token, (events) => {
+    successCallback: (token) => {
+    loadUserCalendar(token, (events) => {
     renderCalendar(events);
   });
-}
-    });
+});
   }
 })();
 
@@ -37,6 +36,7 @@ function renderError(error) {
     style: 'word-break: break-all;'
   }).appendTo('#tab-container');
 }
+
 // <LoadUserCalendarSnippet>
     function loadUserCalendar(token, callback) {
       // Call the API
@@ -113,8 +113,8 @@ function renderError(error) {
       });
     }
     // </RenderCalendarSnippet>
-    
-    // <RenderHelpersSnippet>
+
+  // <RenderHelpersSnippet>
     function renderSubject(subject) {
       if (!subject || subject.length <= 0) {
         subject = '<No subject>';

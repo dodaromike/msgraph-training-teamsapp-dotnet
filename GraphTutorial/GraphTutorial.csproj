@@ -4,13 +4,13 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>5f50ea4b-3407-4c39-b522-ed278d6a0f07</UserSecretsId>
+    <UserSecretsId>f53bac4a-ed26-4e77-ad7f-50c83d5000b7</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Graph" Version="4.40.0" />
-    <PackageReference Include="Microsoft.Identity.Web" Version="1.25.2" />
-    <PackageReference Include="Microsoft.Identity.Web.MicrosoftGraph" Version="1.25.2" />
+    <PackageReference Include="Microsoft.Graph" Version="4.43.0" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="1.25.3" />
+    <PackageReference Include="Microsoft.Identity.Web.MicrosoftGraph" Version="1.25.3" />
     <PackageReference Include="TimeZoneConverter" Version="6.0.1" />
   </ItemGroup>
 
