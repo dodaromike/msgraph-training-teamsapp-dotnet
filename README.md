@@ -14,7 +14,7 @@ languages:
 
 This sample demonstrates how to use the Microsoft Graph .NET SDK to access data in Office 365 from Microsoft Teams apps.
 
-# Prerequisites
+## Prerequisites
 
 Before you start this tutorial, you should have the following installed on your development machine.
 
