@@ -23,6 +23,21 @@ Before you start this tutorial, you should have the following installed on your 
 
 You should also have a Microsoft work or school account in a Microsoft 365 tenant that has [enabled custom Teams app sideloading](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading). If you don't have a Microsoft work or school account, or your organization has not enabled custom Teams app sideloading, you can [sign up for the Microsoft 365 Developer Program](https://developer.microsoft.com/office/dev-program) to get a free Office 365 developer subscription.
 
+### Run ngrok
+
+Microsoft Teams does not support local hosting for apps. The server hosting your app must be available from the cloud using HTTPS endpoints. For debugging locally, you can use ngrok to create a public URL for your locally-hosted project.
+
+1. Open your CLI and run the following command to start ngrok.
+
+    ```Shell
+    ngrok http 5000
+    ```
+
+1. Once ngrok starts, copy the HTTPS Forwarding URL. It should look like `https://50153897dd4d.ngrok.io`. You'll need this value to .
+
+> [!IMPORTANT]
+> If you are using the free version of ngrok, the forwarding URL changes every time you restart ngrok. It's recommended that you leave ngrok running until you complete this tutorial to keep the same URL. If you have to restart ngrok, you'll need to update your URL everywhere that it is used and reinstall the app in Microsoft Teams.
+
 ## Register the app
 
 In this exercise, you will create a new Azure AD web application registration using the Azure Active Directory admin center.
@@ -80,7 +95,8 @@ In this section you'll update the app registration to support [single sign-on in
 
 ## Running the sample
 
-Use Teams Developer Portal to add and approve app.
+### Create Manifest and Add app using Teams Developer Portal.
+<TBD>
 
 ## Code of conduct
 
