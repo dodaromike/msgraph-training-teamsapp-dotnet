@@ -80,7 +80,7 @@ In this section you'll update the app registration to support [single sign-on in
 
 ## Running the sample
 
-The code for this sample is in the [demo](demo) folder. Instructions to configure and run the sample can be found in the [README](demo/README.md) in that folder.
+Use Teams Developer Portal to add and approve app.
 
 ## Code of conduct
 
