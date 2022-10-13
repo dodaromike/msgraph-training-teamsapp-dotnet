@@ -51,7 +51,7 @@ Microsoft Teams does not support local hosting for apps. The server hosting your
     ngrok http 5274
     ```
 
-1. Once ngrok starts, copy the HTTPS Forwarding URL. It should look like `https://50153897dd4d.ngrok.io`. You'll need this value to .
+1. Once ngrok starts, copy the HTTPS Forwarding URL. It should look like `https://50153897dd4d.ngrok.io`. You'll need this value to complete the app registration.
 
 > [!IMPORTANT]
 > If you are using the free version of ngrok, the forwarding URL changes every time you restart ngrok. It's recommended that you leave ngrok running until you complete this tutorial to keep the same URL. If you have to restart ngrok, you'll need to update your URL everywhere that it is used and reinstall the app in Microsoft Teams.
