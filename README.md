@@ -27,10 +27,28 @@ You should also have a Microsoft work or school account in a Microsoft 365 tenan
 
 Microsoft Teams does not support local hosting for apps. The server hosting your app must be available from the cloud using HTTPS endpoints. For debugging locally, you can use ngrok to create a public URL for your locally-hosted project.
 
+1. Open CLI in the project direcory, and run 
+    ```Shell
+    dotnet run
+    ```
+ 1. Note 'Now listening on:' port number in the output:
+    ```
+    Building...
+    info: Microsoft.Hosting.Lifetime[14]
+        Now listening on: https://localhost:7209
+    info: Microsoft.Hosting.Lifetime[14]
+        Now listening on: http://localhost:5274
+    info: Microsoft.Hosting.Lifetime[0]
+        Application started. Press Ctrl+C to shut down.
+    info: Microsoft.Hosting.Lifetime[0]
+        Hosting environment: Development
+    info: Microsoft.Hosting.Lifetime[0]
+    ```
+
 1. Open your CLI and run the following command to start ngrok.
 
     ```Shell
-    ngrok http 5000
+    ngrok http 5274
     ```
 
 1. Once ngrok starts, copy the HTTPS Forwarding URL. It should look like `https://50153897dd4d.ngrok.io`. You'll need this value to .

@@ -1,0 +1,49 @@
+﻿@page
+@model IndexModel
+@{
+  ViewData["Title"] = "Home page";
+}
+
+<div id="tab-container">
+  <h1 class="ms-fontSize-24 ms-fontWeight-semibold">Loading...</h1>
+</div>
+
+@section Scripts
+{
+  <script>
+
+    (function () {
+  if (microsoftTeams) {
+    microsoftTeams.initialize();
+
+    microsoftTeams.authentication.getAuthToken({
+      successCallback: (token) => {
+        // TEMPORARY: Display the access token for debugging
+        $('#tab-container').empty();
+
+        $('<code/>', {
+          text: token,
+          style: 'word-break: break-all;'
+        }).appendTo('#tab-container');
+      },
+      failureCallback: (error) => {
+        renderError(error);
+      }
+    });
+  }
+})();
+
+function renderError(error) {
+  $('#tab-container').empty();
+
+  $('<h1/>', {
+    text: 'Error'
+  }).appendTo('#tab-container');
+
+  $('<code/>', {
+    text: JSON.stringify(error, Object.getOwnPropertyNames(error)),
+    style: 'word-break: break-all;'
+  }).appendTo('#tab-container');
+}
+  </script>
+}
