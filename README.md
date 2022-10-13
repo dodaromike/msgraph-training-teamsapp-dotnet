@@ -96,7 +96,7 @@ In this section you'll update the app registration to support [single sign-on in
 ## Running the sample
 
 ### Create Manifest and Add app using Teams Developer Portal.
-<TBD>
+-TBD-
 
 ## Code of conduct
 
